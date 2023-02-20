@@ -1,0 +1,1 @@
+import{_ as r}from"./References.647aae9b.js";import{_ as c}from"./_plugin-vue_export-helper.c27b6911.js";import{o as e,c as t}from"./entry.d2486781.js";import"./query.f745b0e4.js";import"./utils.7b52dff8.js";import"./navarium.5c0e4a3d.js";const n={};function s(_,m){const o=r;return e(),t(o,{class:"py-24"})}const x=c(n,[["render",s]]);export{x as default};
