@@ -1,37 +1,45 @@
 <template>
-  <div class="text-gray-900">
-
-    <!-- Header & Navigation -->
-    <header class="p-6 flex flex-col md:flex-row items-center justify-between text-center">
-      <strong>
-        <g-link to="/" class="text-2xl">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="flex gap-x-4 text-gray-600">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/blog/">Blog</g-link>
-      </nav>
-    </header>
-
-    <!-- Page Content -->
-    <main class="p-6">
-      <slot/>
+  <div>
+    <Navbar :isScrolled="isScrolled" :scrollAmount="scrollAmount"/>
+    <main class="min-h-screen text-gray-700 bg-white dark:bg-primary dark:text-gray-50">
+      <slot />
     </main>
-
+    <Contact class="relative z-10" />
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
+<script>
+import Navbar from '../components/Navbar.vue';
+import Contact from '../components/Contact.vue';
+export default {
+  components: {
+    Navbar,
+    Contact
+  },
+  data() {
+    return {
+      isScrolled: false,
+      scrollAmount: 0
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.throttle(this.handleScroll, 100), { passive: true })
+  },
+  methods: {
+    throttle(fn, delay) {
+      let timeoutID = null
+      return () => {
+        timeoutID = setTimeout(() => {
+          clearTimeout(timeoutID)
+          fn()
+        }, delay)
+      }
+    },
+    handleScroll() {
+      this.isScrolled = (window.scrollY || window.scrollTop) > 80
+      this.scrollAmount = 10 * Math.round(window.scrollY / 20)
+      if (this.scrollAmount >= 100) { this.scrollAmount = 100 }
+    }
   }
 }
-</static-query>
-
-<style scoped>
-/* Add any Global Styles Here */
-
-.active--exact { /* Active Nav Link */
-  @apply text-gray-900;
-}
-</style>
+</script>
