@@ -12,11 +12,9 @@
             </svg>
           </g-link>
           <div class="hidden md:block">
-            <scrollactive ref="scrollactive" highlight-first-item>
-              <g-link to="/#services" class="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" :class="[solid ? 'text-blue dark:text-blue-50' : 'text-white']">{{$t('menu.services')}}</g-link>
-              <g-link to="/references" class="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" :class="[solid ? 'text-blue dark:text-blue-50' : 'text-white']">{{$t('menu.references')}}</g-link>
-              <g-link to="/#contact" class="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" :class="[solid ? 'text-blue dark:text-blue-50' : 'text-white']">{{$t('menu.contact')}}</g-link>
-            </scrollactive>
+            <a :href="`/${$i18n.locale}/#services`" class="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" :class="[solid ? 'text-blue dark:text-blue-50' : 'text-white']">{{$t('menu.services')}}</a>
+            <g-link to="/references" class="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" :class="[solid ? 'text-blue dark:text-blue-50' : 'text-white']">{{$t('menu.references')}}</g-link>
+            <a :href="`/${$i18n.locale}/#contact`" class="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" :class="[solid ? 'text-blue dark:text-blue-50' : 'text-white']">{{$t('menu.contact')}}</a>
           </div>
         </div>
         <ThemeToggler class="ml-auto mr-2" :class="[solid ? 'text-primary dark:text-blue-50' : 'text-white']" />
@@ -44,9 +42,9 @@
     <!-- Mobile menu, show/hide based on menu state. -->
     <div id="mobile-menu" class="bg-white text-primary dark:bg-primary dark:text-white md:hidden">
       <div v-if="open" class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <g-link to="/#services" class="block px-3 py-2 rounded-md text-base font-medium">{{$t('menu.services')}}</g-link>
+        <a :href="`/${$i18n.locale}/#services`" class="block px-3 py-2 rounded-md text-base font-medium">{{$t('menu.services')}}</a>
         <g-link to="/references" class="block px-3 py-2 rounded-md text-base font-medium">{{$t('menu.references')}}</g-link>
-        <g-link to="/#contact" class="block px-3 py-2 rounded-md text-base font-medium">{{$t('menu.contact')}}</g-link>
+        <a :href="`/${$i18n.locale}/#contact`" class="block px-3 py-2 rounded-md text-base font-medium">{{$t('menu.contact')}}</a>
       </div>
     </div>
   </nav>
