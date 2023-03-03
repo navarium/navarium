@@ -2,7 +2,7 @@
   <div class="relative z-10 py-12 bg-white dark:bg-primary">
     <div class="container mx-auto px-4">
       <h1 class="h1 text-4xl font-medium mb-8 text-center">{{$t('section.references.title')}}</h1>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <router-link v-for="edge in references" :to="edge.node.path" :key="edge.node.id">
           <ReferenceCard :reference="edge.node"/>
         </router-link>
