@@ -14,6 +14,7 @@ import Services from '../components/sections/Services.vue'
 import References from '../components/sections/References.vue'
 
 export default {
+  name: 'Home',
   metaInfo: {
     title: 'Home'
   },

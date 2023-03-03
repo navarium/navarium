@@ -4,7 +4,7 @@
       <h1 class="h1 text-4xl font-medium mb-8 text-center">{{$t('section.references.title')}}</h1>
       <div class="grid grid-cols-3 gap-8">
         <router-link v-for="edge in $page.references.edges" :to="edge.node.path" :key="edge.node.id">
-          <Reference :reference="edge.node"/>
+          <ReferenceCard :reference="edge.node"/>
         </router-link>
       </div>
     </div>
@@ -30,12 +30,12 @@ query ($locale: String) {
 </page-query>
 
 <script>
-import Reference from '@/components/Reference'
+import ReferenceCard from '@/components/ReferenceCard'
 
 export default {
   name: 'References',
   components: {
-    Reference,
+    ReferenceCard,
   },
   metaInfo: {
     title: 'References'

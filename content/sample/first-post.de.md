@@ -9,7 +9,7 @@ images:
   - /img/ship2.jpg
   - /img/ship3.jpg
 ---
-## Marito occiderat
+# Marito occiderat
 
 Lorem markdownum aurum, in sol promptu postquam quoque spectans monebat dubita
 conata et effuge aprica, pennis. Ducebat in ulla frui, misi sortis faciat, cum

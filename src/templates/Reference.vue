@@ -7,13 +7,17 @@
           <h1 class="text-6xl text-medium dark:text-white mb-2">
             {{ $page.reference.title }}
           </h1>
-          <!-- <p class="text-gray-600 dark:text-gray-400 my-4">
-            {{ $page.reference.date }}
-          </p> -->
+          <p class="text-gray-600 dark:text-gray-400 my-4">
+            {{ $page.reference.date.split('-')[0] }}
+          </p>
         </div>
+
         <hr class="my-8 border-gray-600">
+
         <div v-html="$page.reference.content" class="space-y-6 prose prose-xl text-primary dark:text-white"/>
+
         <hr class="my-8 border-gray-600">
+
         <div v-if="$page.reference.images?.length" class="grid gap-8 place-center">
           <g-link v-for="image in $page.reference.images" :key="image" :to="image" target="_blank" noopener npreferrer>
             <img class="mx-auto" :src="image">

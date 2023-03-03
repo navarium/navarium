@@ -7,13 +7,13 @@
       <path fill-rule="evenodd" clip-rule="evenodd" d="M89.5978 49.9952C103.404 49.9952 114.595 38.8034 114.595 24.9976C114.595 11.1918 103.404 0 89.5978 0C75.7921 0 64.6003 11.1918 64.6003 24.9976C64.6003 38.8034 75.7921 49.9952 89.5978 49.9952ZM89.5182 37.5169C96.4211 37.5169 102.017 31.921 102.017 25.0181C102.017 18.1152 96.4211 12.5193 89.5182 12.5193C82.6153 12.5193 77.0194 18.1152 77.0194 25.0181C77.0194 31.921 82.6153 37.5169 89.5182 37.5169Z" fill="currentColor"/>
     </svg>
 
-    <h1 class="text-3xl p-4 mb-0 dark:text-white">
+    <h1 class="text-lg p-4 mb-0 dark:text-white">
       {{ reference.title }}
     </h1>
     <p class="text-sm px-2 m-0 dark:text-white">
       {{ reference.description }}
     </p>
-    <!-- <span class="block px-2 text-sm font-bold text-gray-600">{{ reference.date }}</span> -->
+    <span class="block px-2 text-sm font-bold text-gray-600">{{ reference.date.split('-')[0] }}</span>
   </article>
 </template>
 

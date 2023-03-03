@@ -1,6 +1,6 @@
 ---
 title: "Búvárdereglye"
-description: ""
+description: "„Búvárdereglye” bombakiemelő tűzszerész hajó gyártási tervei a Magyar Honvédég részére"
 date: 2022-02-01
 lang: hu
 slug: buvardereglye
