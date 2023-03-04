@@ -44,21 +44,28 @@ git push # vagy explicit: git push origin main
 
 1. *Source Control* tab kiválasztása
 ![source control](https://res.cloudinary.com/dvjmebbte/image/upload/v1677918083/develop/SCR-20230304-czj_jvd51n.png)
+
 2. Pull - megegyezik a `git pull` paranccsal
-![pull](https://res.cloudinary.com/dvjmebbte/image/upload/v1677918347/develop/SCR-20230304-d2r_fzcfhy.png)
+  - vagy a Sync gombbal ha nem változtattál még semmit
+  ![Sync](https://res.cloudinary.com/dvjmebbte/image/upload/v1677962687/develop/SCR-20230304-u6r_j4rhcz.png)
+  - vagy alul *Commits* lenyíló panelen a `↓` gombbal
+  ![pull-button](https://res.cloudinary.com/dvjmebbte/image/upload/v1677962980/develop/SCR-20230304-uav_satcgo.png)
+  - vagy a *Source Control* panelen a `…` menüben a `Pull` opcióval
+  ![pull-option](https://res.cloudinary.com/dvjmebbte/image/upload/v1677918347/develop/SCR-20230304-d2r_fzcfhy.png)
+
 3. Add - megegyezik a `git add .` paranccsal
 A Changes sorban a `+` jelre kattintva az összes fájlt megjelöli hogy commitolható (`Staged` státuszba kerülnek), vagy a fájlok sorában egyesével is megteheted ezt ha csak specifikus fájlokat szeretnél commitolni. Ha egy fájlt mégse szeretnél beküldeni és vissza szeretnéd állítani az állapotát az utolsó commit állapotára, akkor a `+` melletti visszaforduló nyíllal lehet ezt megtenni.
 ![add](https://res.cloudinary.com/dvjmebbte/image/upload/v1677918537/develop/SCR-20230304-d5s_vm700b.png)
-4. Commit - megegyezik a `git commit -am "COMMIT MESSAGE"` paranccsal. Itt egy rövid üzenetet megadhatsz ami arra szolgál hogy később a commit historiban gyorsan áttekinthető hogy mi történt az egyes commitokban. Egyébként ezt itt a *Source Control* panelen alatt a *Commits* lenyílóban is láthatod.
+
+4. Commit - megegyezik a `git commit -am "COMMIT MESSAGE"` paranccsal.
+Itt egy rövid üzenetet megadhatsz ami arra szolgál hogy később a commit historiban gyorsan áttekinthető hogy mi történt az egyes commitokban. Egyébként ezt itt a *Source Control* panelen alatt a *Commits* lenyílóban is láthatod.
 
 Ha beírtál valamit, akkor a nagy **Commit** gombbal véglegesítheted.
 ![commit](https://res.cloudinary.com/dvjmebbte/image/upload/v1677960820/develop/SCR-20230304-tf7_o6leg6.png)
 ![commit-history](https://res.cloudinary.com/dvjmebbte/image/upload/v1677961087/develop/SCR-20230304-tkl_tyjkbl.png)
-5. Push - megegyezik a `git push` paranccsal
-- vagy alul az előbb említett *Commits* panelen a `↑` gombbal
-![push-button](https://res.cloudinary.com/dvjmebbte/image/upload/v1677961608/develop/SCR-20230304-ts2_dv4epj.png)
-- vagy a *Source Control* panelen a `…` menüben a `Push` opcióval
-![push-option](https://res.cloudinary.com/dvjmebbte/image/upload/v1677961765/develop/SCR-20230304-tu7_f076bz.png)
+
+5. Push - megegyezik a `git push` paranccsal.
+Ugyanazok a lehetőségek mint a 2. pontban a Pull-nál, csak itt értelemszerűen Push gomb és Push menüpont fog kelleni.
 
 ## Egyéb eszközök
 
