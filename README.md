@@ -1,31 +1,70 @@
-# Minimal Gridsome Starter with TailwindCSS + Markdown
+# Nvarium website projekt
 
-This starter is very simple, it's just meant to skip the setup of Gridsome as a Static Site + CMS. It's using TailwindCSS, as well as Markdown for the site content. 
+> Hazsnált technológiák: Gridsome(Vue) + TailwindCSS + Markdown
 
-There are two example posts in the `content/posts` folder, a template for Blog Posts (as well as blog feed items), and some simple meta tag examples in the blog post template.
+## Telepítés
 
-View a live preview [here](https://gridsome-tailwind-markdown-starter.netlify.app/).
+### Előfeltétel:
+- Node 14-es verzió (weboldalrol letölthető a telepítő)
+- Yarn - node telepítése után a következő paranccsal telepíthető: `npm install -g yarn`
 
-[![Deploy on Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/knightspore/gridsome-tailwindcss-markdown-starter)
+### Project dependenciák telepítése:
+`yarn install`
 
-## Installation
 
-### Install the Gridsome CLI
+## Futtatás local környezetben
+Minden parancsot a terminalban kell kiadni a projekt könyvtárában (navarium-web)
 
-`npm i -g @gridsome/cli`
+`yarn develop`
 
-### Create a new Gridsome Project with this Template & Start the Development Server
+Ezután a http://localhost:8080 url-el érhető el az oldal.
 
+
+## Deployolás a Github Pages-re
+`yarn deploy`
+1. lépésben a forráskódból lebuildeli a kirakható csomagot a `./dist` könyvtárba
+2. lépésben feltölti a GitHub-ra, a [`gh-pages`](https://github.com/navarium/navarium-web/tree/gh-pages) branch-re, innen fogja a weboldal elérni a resourceokat.
+
+
+## Forráskód beküldése GitHub-ra
+### Terminal használatával
 ```bash
-git clone https://github.com/knightspore/gridsome-tailwindcss-markdown-starter.git
-cd gridsome-tailwindcss-markdown-starter
-gridsome develop
+git pull # vagy explicit: git pull origin main
+git add .
+git commit -am "COMMIT MESSAGE"
+git push # vagy explicit: git push origin main
 ```
+1. sorral letöltöd a GitHub repoból a friss kódot (ha volt).
+  Kicsit kifejtbe, minden reponak van neve, a default az `origin` ami jelen esetbe a https://github.com/navarium/navarium-web -re mutat. A `main` pedig az a branch amire beküldöd a kódot.
+2. sorral az összes módosított fájlt megjelölöd beküldésre
+3. sorral létrehozol egy verziópontot
+4. sorral pedig beküldöd a GitHub repo-ba
 
-And you're ready to go! Enjoy! 
+### VSCode használatával
 
-## Usage
+1. *Source Control* tab kiválasztása
+![source control](https://res.cloudinary.com/dvjmebbte/image/upload/v1677918083/develop/SCR-20230304-czj_jvd51n.png)
+2. Pull - megegyezik a `git pull` paranccsal
+![pull](https://res.cloudinary.com/dvjmebbte/image/upload/v1677918347/develop/SCR-20230304-d2r_fzcfhy.png)
+3. Add - megegyezik a `git add .` paranccsal
+A Changes sorban a `+` jelre kattintva az összes fájlt megjelöli hogy commitolható (`Staged` státuszba kerülnek), vagy a fájlok sorában egyesével is megteheted ezt ha csak specifikus fájlokat szeretnél commitolni. Ha egy fájlt mégse szeretnél beküldeni és vissza szeretnéd állítani az állapotát az utolsó commit állapotára, akkor a `+` melletti visszaforduló nyíllal lehet ezt megtenni.
+![add](https://res.cloudinary.com/dvjmebbte/image/upload/v1677918537/develop/SCR-20230304-d5s_vm700b.png)
+4. Commit - megegyezik a `git commit -am "COMMIT MESSAGE"` paranccsal. Itt egy rövid üzenetet megadhatsz ami arra szolgál hogy később a commit historiban gyorsan áttekinthető hogy mi történt az egyes commitokban. Egyébként ezt itt a *Source Control* panelen alatt a *Commits* lenyílóban is láthatod.
 
-Pull requests are welcome! I created this template to give something back to the Gridsome community.
+Ha beírtál valamit, akkor a nagy **Commit** gombbal véglegesítheted.
+![commit](https://res.cloudinary.com/dvjmebbte/image/upload/v1677960820/develop/SCR-20230304-tf7_o6leg6.png)
+![commit-history](https://res.cloudinary.com/dvjmebbte/image/upload/v1677961087/develop/SCR-20230304-tkl_tyjkbl.png)
+5. Push - megegyezik a `git push` paranccsal
+- vagy alul az előbb említett *Commits* panelen a `↑` gombbal
+![push-button](https://res.cloudinary.com/dvjmebbte/image/upload/v1677961608/develop/SCR-20230304-ts2_dv4epj.png)
+- vagy a *Source Control* panelen a `…` menüben a `Push` opcióval
+![push-option](https://res.cloudinary.com/dvjmebbte/image/upload/v1677961765/develop/SCR-20230304-tu7_f076bz.png)
+
+## Egyéb eszközök
+
+- TailwindCSS CSS framework - [dokumentáció](https://tailwindcss.com/docs/installation)
+- [Cloudinary](https://cloudinary.com) - kép tárhely (bejelentkezés GitHub fiókkal)
+- Markdown leíró - [Cheat sheet](https://www.markdownguide.org/cheat-sheet/)
+
 
 
