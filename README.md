@@ -1,6 +1,10 @@
 # Navarium website projekt
 
-> Hazsnált technológiák: Gridsome(Vue) + TailwindCSS + Markdown
+## Használt eszközök
+- [Gridsome](https://gridsome.org/docs/) - static site generator
+- [TailwindCSS](https://tailwindcss.com/docs/installation) -  CSS framework
+- [Cloudinary](https://cloudinary.com) - kép tárhely (bejelentkezés GitHub fiókkal)
+- [Markdown](https://www.markdownguide.org/cheat-sheet/) - leíró nyelv
 
 ## Telepítés
 
@@ -66,12 +70,3 @@ Ha beírtál valamit, akkor a nagy **Commit** gombbal véglegesítheted.
 
 5. Push - megegyezik a `git push` paranccsal.
 Ugyanazok a lehetőségek mint a 2. pontban a Pull-nál, csak itt értelemszerűen Push gomb és Push menüpont fog kelleni.
-
-## Egyéb eszközök
-
-- TailwindCSS CSS framework - [dokumentáció](https://tailwindcss.com/docs/installation)
-- [Cloudinary](https://cloudinary.com) - kép tárhely (bejelentkezés GitHub fiókkal)
-- Markdown leíró - [Cheat sheet](https://www.markdownguide.org/cheat-sheet/)
-
-
-
