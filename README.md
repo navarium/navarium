@@ -1,4 +1,4 @@
-# Nvarium website projekt
+# Navarium website projekt
 
 > Hazsnált technológiák: Gridsome(Vue) + TailwindCSS + Markdown
 
